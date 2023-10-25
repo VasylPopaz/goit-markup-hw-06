@@ -167,6 +167,9 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   display: none;
 }
 .menu-toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   background-color: transparent;
 }
@@ -399,6 +402,12 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.team-item:first-child img{
+  object-position: top;
+}
+.team-item:nth-child(2) img{
+  object-position: right;
 }
 .team .link {
   background-color: var(--iris-text-color);
@@ -895,6 +904,9 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   | @MEDIA
   |============================
 */
+@media screen and (min-device-pixel-ratio: 2) {
+
+}
 @media screen and (min-resolution:192dpi){
   .hero{
     background-image: linear-gradient(
@@ -982,12 +994,6 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   .team-item {
     flex-basis: calc((100% - 24px) / 2);
   }
-  .team-item:first-child img{
-    object-position: top;
-  }
-  .team-item:nth-child(2) img{
-    object-position: right;
-  }
   /**
     |============= CUSTOMERS =============
   */
@@ -1068,10 +1074,12 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   .open-mobile-menu-container .logo-link{
     padding: 24px 0;
   }
+  .mobile-menu-container .header-nav{
+    margin-bottom: 284px;
+  }
   .mobile-menu-container .nav-list{
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 284px;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
@@ -1093,6 +1101,7 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
   }
   .mobile-menu-container .address-list{
     flex-direction: column-reverse;
+    gap: 40px;
   }
   .mobile-menu-container .address-item:first-child{
     font-size: 20px;
@@ -1105,6 +1114,7 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
+    letter-spacing: 0.02em;
   }
   .mobile-menu-container .social-list{
     display: flex;
