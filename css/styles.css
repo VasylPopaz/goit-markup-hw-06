@@ -1096,6 +1096,14 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     top: 24px;
     right: 24px;
   }
+  .mobile-menu-container .menu-toggle:hover,
+  .mobile-menu-container .menu-toggle:focus{
+    background-color: var(--accent-color);
+  }
+  .mobile-menu-container .menu-toggle:hover .close-icon,
+  .mobile-menu-container .menu-toggle:focus .close-icon{
+    fill:var(--primary-white-color);
+  }
   .mobile-menu-container .header-address{
     margin-bottom: 48px;
   }
