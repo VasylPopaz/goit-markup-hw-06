@@ -19,6 +19,22 @@
   <body>
     <!-- HEADER -->
     <header class="header">
+      <!-- MOBILE MENU-->
+      <div class="open-mobile-menu-container">
+        <a class="logo-link link" href="./index.html"
+          >Web<span class="text-logo">Studio</span></a
+        >
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- DESKTOP MENU-->
       <div class="header-container container">
         <nav class="header-nav">
           <a class="logo-link link" href="./index.html"
@@ -82,6 +98,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/banking-app@2x.jpg 2x"
                     src="./images/portfolio/banking-app.jpg"
                     alt="Banking App Interface Concept"
                     width="360"
@@ -103,6 +120,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/cashless-pay@2x.jpg 2x"
                     src="./images//portfolio/cashless-pay.jpg"
                     alt="Cashless-payment"
                     width="360"
@@ -124,6 +142,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/meditation-app@2x.jpg 2x"
                     src="./images/portfolio/meditation-app.jpg"
                     alt="Meditation app"
                     width="360"
@@ -145,6 +164,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/taxi-service@2x.jpg 2x"
                     src="./images/portfolio/taxi-service.jpg"
                     alt="Taxi Service"
                     width="360"
@@ -166,6 +186,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/screen-illustrations@2x.jpg 2x"
                     src="./images/portfolio/screen-illustrations.jpg"
                     alt="Screen Illustrations"
                     width="360"
@@ -187,7 +208,8 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
-                    src="./images/portfolio/onlaine-courses.jpg"
+                    srcset="./images/portfolio/online-courses@2x.jpeg 2x"
+                    src="./images/portfolio/online-courses.jpg"
                     alt="Online Courses"
                     width="360"
                     height="300"
@@ -208,6 +230,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/instagram-stories@2x.jpg 2x"
                     src="./images/portfolio/instagram-stories.jpg"
                     alt="Instagram Stories Concept"
                     width="360"
@@ -229,6 +252,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/organic-food@2x.jpg 2x"
                     src="./images/portfolio/organic-food.jpg"
                     alt="Organic Food"
                     width="360"
@@ -250,6 +274,7 @@
               <a class="app-link link" href="#">
                 <div class="img-container">
                   <img
+                    srcset="./images/portfolio/fresh-cofee@2x.jpg 2x"
                     src="./images/portfolio/fresh-coffe.jpg"
                     alt="Fresh Coffee"
                     width="360"
@@ -363,5 +388,106 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="header-nav">
+        <a class="logo-link link" href="./index.html"
+          >Web<span class="text-logo">Studio</span></a
+        >
+        <ul class="nav-list list">
+          <li class="nav-item">
+            <a class="nav-link link" href="./index.html">Studio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="header-address">
+        <ul class="address-list list">
+          <li class="address-item">
+            <a class="contact-link link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="address-item">
+            <a class="contact-link link" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+      </address>
+      <div class="social-container">
+        <ul class="social-list list">
+          <li class="social-list-item">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram link"
+              class="link"
+            >
+              <svg class="icon" height="24" width="24">
+                <use href="./images/icons.svg#icon-instagram2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter link"
+              class="link"
+            >
+              <svg class="icon" height="24" width="24">
+                <use href="./images/icons.svg#icon-twitter2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook link"
+              class="link"
+            >
+              <svg class="icon" height="24" width="24">
+                <use href="./images/icons.svg#icon-facebook2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linkedin link"
+              class="link"
+            >
+              <svg class="icon" height="24" width="24">
+                <use href="./images/icons.svg#icon-linkedin2"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
