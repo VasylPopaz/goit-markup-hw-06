@@ -547,7 +547,7 @@ input {
     text-align: left;
   }
   .qualities-list {
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 72px;
   }
   .qualities-item {
@@ -670,7 +670,7 @@ input {
 }
 @media only screen and (min-width: 768px) {
   .team-list {
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 64px;
   }
   .team-item {
@@ -707,7 +707,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  column-gap: 16px;
   row-gap: 72px;
 }
 .customers-item {
@@ -741,7 +741,7 @@ input {
 }
 @media only screen and (min-width: 768px) {
   .customers-list {
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 72px;
   }
   .customers-item {
@@ -786,28 +786,31 @@ input {
 }
 .footer-container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 72px;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer-container {
+    text-align: center;
+    justify-content: center;
+  }
 }
 .footer .logo-container {
   max-width: 268px;
 }
 .footer .logo-link {
   display: block;
-  text-align: center;
   margin-bottom: 18px;
 }
 .footer .text-logo {
   color: var(--cloud-color);
 }
 .footer .description-text {
-  text-align: center;
+  text-align: left;
   color: var(--cloud-color);
-  margin-bottom: 72px;
 }
 .footer .social-description-text {
-  text-align: center;
   color: var(--primary-white-color);
   font-size: 16px;
   font-weight: 500;
@@ -821,9 +824,6 @@ input {
 .footer .social-list-item {
   height: 40px;
   width: 40px;
-}
-.social-container {
-  margin-bottom: 72px;
 }
 .social-container .icon {
   fill: var(--cloud-color);
@@ -839,12 +839,10 @@ input {
   width: 100%;
 }
 .subscribe-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   width: 100%;
 }
 .subscribe-input {
+  margin-bottom: 16px;
   outline: transparent;
   width: 100%;
   height: 40px;
@@ -870,11 +868,10 @@ input {
 .subscribe-btn {
   min-width: 165px;
   height: 40px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
-  align-self: center;
   border: none;
   border-radius: 4px;
   background: var(--iris-text-color);
@@ -906,7 +903,7 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 72px;
   }
   .footer .logo-link {
@@ -923,7 +920,8 @@ input {
     text-align: left;
   }
   .footer .subscribe-form {
-    flex-direction: row;
+    display: flex;
+    gap: 24px;
   }
   .footer .subscribe-input {
     width: 264px;
@@ -1017,7 +1015,7 @@ input {
 .button-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  column-gap: 24px;
   row-gap: 16px;
   margin-bottom: 48px;
 }
@@ -1119,7 +1117,7 @@ input {
   }
   .app-list {
     justify-content: flex-start;
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 72px;
   }
   .app-list-item {
