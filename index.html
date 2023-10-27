@@ -28,6 +28,7 @@
           class="menu-toggle js-open-menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          type="button"
         >
           <svg width="32" height="22">
             <use href="./images/icons.svg#icon-menu"></use>
@@ -142,26 +143,41 @@
           <ul class="activity-list list">
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/gallery/img1.jpg    1x,
+                  ./images/gallery/img1@2x.jpg 2x
+                "
                 src="./images/gallery/img1.jpg"
                 alt="Monitor"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/gallery/img2.jpg    1x,
+                  ./images/gallery/img2@2x.jpg 2x
+                "
                 src="./images/gallery/img2.jpg"
                 alt="Phone"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/gallery/img3.jpg    1x,
+                  ./images/gallery/img3@2x.jpg 2x
+                "
                 src="./images/gallery/img3.jpg"
                 alt="Laptop&phone"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
           </ul>
@@ -174,11 +190,15 @@
           <ul class="team-list list">
             <li class="team-item">
               <img
-                srcset="./images/employees/mark-guerrero@2x.jpg 2x"
+                srcset="
+                  ./images/employees/mark-guerrero.jpg    1x,
+                  ./images/employees/mark-guerrero@2x.jpg 2x
+                "
                 src="./images/employees/mark-guerrero.jpg"
                 alt="Mark Guerrero Product Designer "
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="employee">
                 <h3 class="subtitle">Mark Guerrero</h3>
@@ -242,11 +262,15 @@
             </li>
             <li class="team-item">
               <img
-                srcset="./images/employees/tom-ford@2x.jpg 2x"
+                srcset="
+                  ./images/employees/tom-ford.jpg    1x,
+                  ./images/employees/tom-ford@2x.jpg 2x
+                "
                 src="./images/employees/tom-ford.jpg"
                 alt="Tom Ford Frontend Developer"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="employee">
                 <h3 class="subtitle">Tom Ford</h3>
@@ -315,6 +339,7 @@
                 alt="Camila Garcia Marketing"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="employee">
                 <h3 class="subtitle">Camila Garcia</h3>
@@ -383,6 +408,7 @@
                 alt="Daniel Wilson UI Designer"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="employee">
                 <h3 class="subtitle">Daniel Wilson</h3>
@@ -522,7 +548,7 @@
                 class="link"
               >
                 <svg class="icon" height="24" width="24">
-                  <use href="./images/icons.svg#icon-instagram2"></use>
+                  <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -535,7 +561,7 @@
                 class="link"
               >
                 <svg class="icon" height="24" width="24">
-                  <use href="./images/icons.svg#icon-twitter2"></use>
+                  <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -548,7 +574,7 @@
                 class="link"
               >
                 <svg class="icon" height="24" width="24">
-                  <use href="./images/icons.svg#icon-facebook2"></use>
+                  <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -561,7 +587,7 @@
                 class="link"
               >
                 <svg class="icon" height="24" width="24">
-                  <use href="./images/icons.svg#icon-linkedin2"></use>
+                  <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -685,41 +711,34 @@
     </div>
     <!-- Mobile Menu -->
     <div class="mobile-menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
+      <button class="menu-toggle js-close-menu" type="button">
         <svg class="close-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
-      <nav class="header-nav">
-        <a class="logo-link link" href="./index.html"
-          >Web<span class="text-logo">Studio</span></a
-        >
-        <ul class="nav-list list">
-          <li class="nav-item">
-            <a class="nav-link link" href="./index.html">Studio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link" href="./portfolio.html">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link" href="#">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-      <address class="header-address">
-        <ul class="address-list list">
-          <li class="address-item">
-            <a class="contact-link link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="address-item">
-            <a class="contact-link link" href="tel:+110001111111"
-              >+11 (000) 111-11-11</a
-            >
-          </li>
-        </ul>
-      </address>
+      <ul class="nav-list list">
+        <li class="nav-item">
+          <a class="nav-link link current" href="./index.html">Studio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#">Contacts</a>
+        </li>
+      </ul>
+      <ul class="address-list list">
+        <li class="address-item">
+          <a class="contact-link active link" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="address-item">
+          <a class="contact-link link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
       <div class="social-container">
         <ul class="social-list list">
           <li class="social-list-item">
@@ -731,7 +750,7 @@
               class="link"
             >
               <svg class="icon" height="24" width="24">
-                <use href="./images/icons.svg#icon-instagram2"></use>
+                <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -744,7 +763,7 @@
               class="link"
             >
               <svg class="icon" height="24" width="24">
-                <use href="./images/icons.svg#icon-twitter2"></use>
+                <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -757,7 +776,7 @@
               class="link"
             >
               <svg class="icon" height="24" width="24">
-                <use href="./images/icons.svg#icon-facebook2"></use>
+                <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
@@ -770,7 +789,7 @@
               class="link"
             >
               <svg class="icon" height="24" width="24">
-                <use href="./images/icons.svg#icon-linkedin2"></use>
+                <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>
@@ -783,7 +802,7 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
