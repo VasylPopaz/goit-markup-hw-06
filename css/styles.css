@@ -58,6 +58,7 @@ ol {
 img {
   display: block;
   max-width: 100%;
+  height: 100%;
   overflow: hidden;
   object-fit: cover;
 }
@@ -570,9 +571,6 @@ input {
     font-weight: 500;
     line-height: 1.2;
   }
-  .qualities-list {
-    gap: 24px;
-  }
   .qualities-item {
     flex-basis: calc((100% - 72px) / 4);
   }
@@ -753,10 +751,6 @@ input {
   .customers {
     padding: 120px 0;
   }
-  .customers-list {
-    justify-content: space-between;
-    gap: 24px;
-  }
   .customers-item {
     width: calc((100% - 120px) / 6);
   }
@@ -807,6 +801,7 @@ input {
   color: var(--cloud-color);
 }
 .footer .description-text {
+  max-width: 268px;
   text-align: left;
   color: var(--cloud-color);
 }
@@ -835,15 +830,15 @@ input {
 .footer .social-list .link:active {
   background-color: #31d0aa;
 }
-.form-container {
+.footer .form-container {
+  max-width: 453px;
   width: 100%;
 }
-.subscribe-form {
-  width: 100%;
+.footer-label {
+  display: block;
+  margin-bottom: 16px;
 }
 .subscribe-input {
-  margin-bottom: 16px;
-  outline: transparent;
   width: 100%;
   height: 40px;
   padding-left: 16px;
@@ -857,6 +852,7 @@ input {
   border: 1px solid var(--primary-white-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   opacity: 0.3;
+  outline: transparent;
 }
 .subscribe-input::placeholder {
   color: var(--primary-white-color);
@@ -866,9 +862,9 @@ input {
   letter-spacing: 0.04em;
 }
 .subscribe-btn {
-  min-width: 165px;
   height: 40px;
   display: inline-flex;
+  gap: 16px;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -888,7 +884,6 @@ input {
   background-color: var(--accent-color);
 }
 .send-icon {
-  margin-left: 16px;
   fill: var(--primary-white-color);
 }
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
@@ -899,25 +894,8 @@ input {
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    column-gap: 24px;
-    row-gap: 72px;
-  }
   .footer .logo-link {
     display: inline-block;
-  }
-  .footer .description-text {
-    margin-bottom: 0;
-    text-align: left;
-  }
-  .footer .social-container {
-    margin-bottom: 0;
-  }
-  .footer .social-description-text {
-    text-align: left;
   }
   .footer .subscribe-form {
     display: flex;
@@ -933,51 +911,19 @@ input {
     padding: 100px 0;
   }
   .footer-container {
-    flex-wrap: nowrap;
     align-items: baseline;
-    gap: 0;
   }
   .footer .logo-container {
     margin-right: 120px;
   }
   .footer .logo-link {
-    display: inline-block;
     margin-bottom: 16px;
-  }
-  .footer .text-logo {
-    color: var(--cloud-color);
-  }
-  .footer .description-text {
-    color: var(--cloud-color);
-    max-width: 100%;
   }
   .footer .social-container {
-    margin-right: 80px;
-  }
-  .footer .social-description-text {
-    color: var(--primary-white-color);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    margin-bottom: 16px;
-  }
-  .footer .social-list {
-    gap: 16px;
-  }
-  .footer .social-list-item {
-    height: 40px;
-    width: 40px;
+    margin-right: auto;
   }
   .subscribe-input {
     opacity: 1;
-  }
-  .social-container .icon {
-    fill: var(--cloud-color);
-  }
-  .footer .social-list .link {
-    background-color: var(--iris-text-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .footer .social-list .link:hover,
   .footer .social-list .link:focus {
@@ -990,10 +936,6 @@ input {
   .subscribe-btn:hover,
   .subscribe-btn:focus {
     background-color: var(--accent-color);
-  }
-  .send-icon {
-    margin-left: 16px;
-    fill: var(--primary-white-color);
   }
 }
 /**
@@ -1060,7 +1002,7 @@ input {
 }
 .app-link {
   display: block;
-  border: 1px solid var(--cornflower-color);
+  outline: 1px solid var(--cornflower-color);
   background: var(--primary-white-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1123,6 +1065,10 @@ input {
   .app-list-item {
     flex-basis: calc((100% - 24px) / 2);
   }
+  .app-img {
+    width: 356px;
+    height: 300px;
+  }
   .filter-btn:hover,
   .filter-btn:focus {
     background-color: var(--accent-color);
@@ -1142,6 +1088,9 @@ input {
   }
   .app-list-item {
     flex-basis: calc((100% - 48px) / 3);
+  }
+  .app-img {
+    width: 360px;
   }
 }
 /**
