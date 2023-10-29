@@ -555,7 +555,7 @@ input {
   }
 }
 /* Desktop */
-@media only screen and (min-width: 320px) and (max-width: 1158px) {
+@media only screen and (min-width: 320px) and (max-width: 1157.98px) {
   .qualities .description-text {
     font-weight: 500;
   }
@@ -629,6 +629,12 @@ input {
   gap: 72px;
   justify-content: center;
 }
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .team-list {
+    margin: 0 auto;
+    width: 552px;
+  }
+}
 .team .social-list {
   gap: 24px;
   justify-content: center;
@@ -660,11 +666,6 @@ input {
   fill: var(--cloud-color);
 }
 /* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-  .team .container {
-    padding: 16px 108px;
-  }
-}
 @media only screen and (min-width: 768px) {
   .team-list {
     column-gap: 24px;
@@ -732,8 +733,9 @@ input {
 }
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
-  .customers .container {
-    padding: 16px 108px;
+  .customers-list {
+    margin: 0 auto;
+    width: 552px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -887,8 +889,8 @@ input {
 }
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
   .footer-container.container {
-    padding-left: 108px;
-    padding-right: 108px;
+    margin: 0 auto;
+    width: 552px;
   }
 }
 /* Tablet */
@@ -899,6 +901,9 @@ input {
   .footer .subscribe-form {
     display: flex;
     gap: 24px;
+  }
+  .footer-label {
+    margin-bottom: 0;
   }
   .footer .subscribe-input {
     width: 264px;
@@ -1031,7 +1036,6 @@ input {
   position: relative;
   overflow: hidden;
 }
-.app-list .link:hover .app-descr-text,
 .app-list .link:focus .app-descr-text {
   transform: translateY(0);
 }
@@ -1088,6 +1092,10 @@ input {
   .app-list-item {
     flex-basis: calc((100% - 48px) / 3);
   }
+  .app-list .link:hover .app-descr-text,
+  .app-list .link:focus .app-descr-text {
+    transform: translateY(0);
+  }
   .app-img {
     width: 360px;
   }
@@ -1117,17 +1125,31 @@ input {
 }
 .modal-window {
   position: absolute;
-  padding: 72px 16px 24px 16px;
+  padding: 54px 10px 24px 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 392px;
-  min-height: 584px;
+  min-width: 300px;
+  min-height: 565px;
   border-radius: 4px;
   background-color: #fcfcfc;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+@media only screen and (min-width: 375px) {
+  .modal-window {
+    min-width: 360px;
+  }
+}
+@media only screen and (min-width: 405px) {
+  .modal-window {
+    padding-top: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-width: 392px;
+    min-height: 584px;
+  }
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
@@ -1145,27 +1167,43 @@ input {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 24px;
-  right: 24px;
+  top: 12px;
+  right: 12px;
   border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media only screen and (min-width: 405px) {
+  .button-close {
+    top: 24px;
+    right: 24px;
+  }
+}
 .modal-window .close-icon {
   fill: var(--secondary-navy-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-close:hover,
-.button-close:focus {
+.button-close:active {
   background-color: var(--accent-color);
   border: none;
 }
-.button-close:hover .close-icon,
-.button-close:focus .close-icon {
+.button-close:active .close-icon {
   fill: var(--primary-white-color);
 }
+@media only screen and (min-width: 1158px) {
+  .button-close:hover,
+  .button-close:focus {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  .button-close:hover .close-icon,
+  .button-close:focus .close-icon {
+    fill: var(--primary-white-color);
+  }
+}
+
 /**
   |============================
   | REGISTRATION FORM
@@ -1175,7 +1213,7 @@ input {
   margin-bottom: 16px;
   color: var(--secondary-navy-color);
   text-align: center;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -1187,7 +1225,7 @@ input {
   display: block;
   margin-bottom: 4px;
   color: var(--light-slate-color);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -1196,11 +1234,23 @@ input {
   padding-left: 38px;
   width: 100%;
   height: 40px;
+  font-size: 13px;
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
   background-color: transparent;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 375px) {
+  .reg-form-description {
+    font-size: 16px;
+  }
+  .reg-form .label-description {
+    font-size: 12px;
+  }
+  .reg-input {
+    font-size: 14px;
+  }
 }
 .reg-input:focus,
 .reg-textarea:focus {
@@ -1292,9 +1342,9 @@ input {
 .send-btn {
   display: block;
   margin: 0 auto;
-  height: 56px;
+  min-height: 40px;
   min-width: 169px;
-  padding: 16px 32px;
+  padding: 10px 32px;
   border: none;
   border-radius: 4px;
   background: var(--iris-text-color);
@@ -1308,9 +1358,23 @@ input {
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
-.send-btn:hover,
-.send-btn:focus {
+.send-btn:active {
   background-color: var(--accent-color);
 }
+@media only screen and (min-width: 405px) {
+  .send-btn {
+    min-height: 56px;
+    min-width: 169px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .send-btn:hover,
+  .send-btn:focus {
+    background-color: var(--accent-color);
+  }
+}
+
 /* ================================================/MODAL========================================================= */
 /*  */
